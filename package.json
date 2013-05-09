@@ -6,7 +6,10 @@
     "start": "node app"
   },
   "dependencies": {
+    "connect-assets": "*",
+    "coffee-script": "*",
     "express": "3.0.6",
+    "less": "*",
     "passport": "*",
     "passport-steam": "*",
     "jade": "*",
