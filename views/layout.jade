@@ -9,4 +9,15 @@ html
         li.name
           h1
             a TF2 Pug
+      section.top-bar-section
+        ul.right
+          - if (user)
+            li
+              a #{user.steamid}
+            li.divider
+            li
+              a(href='/logout') Logout
+          - else
+            li
+              a(href='/auth/steam/') Login
     block content

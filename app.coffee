@@ -64,6 +64,11 @@ app.get "/auth/steam/callback", passport.authenticate("steam",
   # Successful authentication, redirect home.
   res.redirect "/"
 
+app.get('/logout', (req, res) ->
+  req.logout()
+  res.redirect('/')
+)
+
 app.get "/users", user.list
 mongoose.connect(config.mongourl, (err) ->
   if err
